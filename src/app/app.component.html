@@ -3,7 +3,7 @@
   placeholder="enter username here"
   name="username"
   #user
-  (keyup.enter)="showUserName(user.value)"
+  [(ngModel)]="name"
   id="username-id">
 <hr>
 <h2>my name is {{name}}</h2>
