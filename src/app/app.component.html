@@ -1,9 +1,18 @@
-<input
-  type="text"
-  placeholder="enter username here"
-  name="username"
-  #user
-  [(ngModel)]="name"
-  id="username-id">
+<button
+  style="width: 150px"
+  (click)="changeState()"> Switch:{{bulbState?'OFF':'ON'}}
+</button>
 <hr>
-<h2>my name is {{name}}</h2>
+
+<img
+  *ngIf="bulbState"
+  [src]="bulbOn"
+  style="width: 100px; height:100px"
+  alt=""
+>
+<img
+  *ngIf="!bulbState"
+  [src]="bulbOff"
+  style="width: 100px; height:100px"
+  alt=""
+>
