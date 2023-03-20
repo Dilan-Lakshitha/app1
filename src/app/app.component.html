@@ -1,8 +1,9 @@
-<h1>My name is {{name}}</h1>
-<img [src]="image_URL"
-      alt=""
-      style="width: 250px;"
->
-
+<input
+  type="text"
+  placeholder="enter username here"
+  name="username"
+  #user
+  (keyup.enter)="showUserName(user.value)"
+  id="username-id">
 <hr>
-<button (click)="printName()">print Name></button>
+<h2>my name is {{name}}</h2>
